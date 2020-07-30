@@ -1,0 +1,38 @@
+{
+  "name": "kendedes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -p tsconfig.json -c tslint.json --fix",
+    "watch-ts": "tsc -w",
+    "build-ts": "tsc "
+  },
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@core": "dist/core",
+    "@util": "dist/util",
+    "@kernel": "dist/kernel"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/sharp": "^0.25.1",
+    "tslint": "^5.12.1",
+    "@types/express": "^4.17.6",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.724.0",
+    "module-alias": "^2.2.2",
+    "express": "^4.16.4",
+    "sharp": "^0.25.4",
+    "uuidv4": "^6.1.0",
+    "app-root-path": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "winston": "^3.3.3"
+  }
+}
