@@ -7,6 +7,10 @@ interface IArdaS3Helper {
 export class ArdaS3Helper implements IArdaS3Helper {
 
   // constructor() { }
+  /**
+   * 
+   * @param name 
+   */
   async validateBuckets(name: string): Promise<any> {
     const formattedBucket: string = name.replace(/\s/g, '');
     logger.info(`trying to validate bucket with format ${formattedBucket}`);
