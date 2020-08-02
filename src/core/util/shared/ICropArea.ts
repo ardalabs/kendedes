@@ -1,4 +1,4 @@
-export interface IArdaCropArea { 
+export interface IKendedesCropArea { 
   left: number,
   top: number,
   width: number,

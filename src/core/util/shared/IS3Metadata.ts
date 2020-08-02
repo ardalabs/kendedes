@@ -1,4 +1,4 @@
-export interface IS3Metadata {
+export interface IKendedesS3Metadata {
   fieldname?:            string;
   originalname?:         string;
   encoding?:             string;

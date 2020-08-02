@@ -1,10 +1,10 @@
 import * as AWS from 'aws-sdk';
 import sharp from 'sharp';
-import { IS3Metadata } from '@core/util/shared/IS3Metadata';
-import { IArdaCropArea } from '@core/util/shared/ICropArea';
+import { IKendedesS3Metadata } from '@core/util/shared/IS3Metadata';
+import { IKendedesCropArea } from '@core/util/shared/ICropArea';
 
 
-interface IArdaImageHandler {
+interface IKendedesImageHandler {
 
   applyTransformation(
     imagepath: string,
@@ -16,34 +16,48 @@ interface IArdaImageHandler {
     widthRatio?: number,
     heightRatio?: number,
     alpha?: number,
-    imageMetaData?: IS3Metadata): Promise<any>
+    imageMetaData?: IKendedesS3Metadata): Promise<any>
   
   getCropArea(
-    boundingBox: IArdaCropArea,
+    boundingBox: IKendedesCropArea,
     options: any,
-    metaData: IS3Metadata): Promise<any>;
+    metaData: IKendedesS3Metadata): Promise<any>;
   
   getBoundingBox(
     imageBuffer: any,
     faceIndex?: number): Promise<any>;
 }
-export class ArdaImageHandler implements IArdaImageHandler { 
+
+export class KendedesImageHandler implements IKendedesImageHandler { 
   constructor() { }
 
-  getBoundingBox(imageBuffer: any, faceIndex?: number): Promise<any> {
+  getBoundingBox(
+    imageBuffer: any,
+    faceIndex?: number): Promise<any> {
     throw new Error("Method not implemented.");
   }
 
-  getCropArea(boundingBox: IArdaCropArea, options: any, metaData: IS3Metadata): Promise<any> {
+  getCropArea(
+    boundingBox: IKendedesCropArea,
+    options: any,
+    metaData: IKendedesS3Metadata): Promise<any> {
     throw new Error("Method not implemented.");
   }
 
-  async getOverlayImage(bucket: string, key: string, widthRatio?: number, heightRatio?: number, alpha?: number, imageMetaData?: IS3Metadata): Promise<any> {
+  async getOverlayImage(
+    bucket: string,
+    key: string,
+    widthRatio?: number,
+    heightRatio?: number,
+    alpha?: number,
+    imageMetaData?: IKendedesS3Metadata): Promise<any> {
     throw new Error("Method not implemented.");
   }
   
-  async applyTransformation(imagepath: string, transform?: any): Promise<any> {
+  async applyTransformation(
+    imagepath: string,
+    transform?: any): Promise<any> {
     throw new Error("Method not implemented.");
   }
 }
-export default ArdaImageHandler;
+export default KendedesImageHandler;
