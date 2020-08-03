@@ -1,7 +1,7 @@
 import * as AWS from 'aws-sdk';
 import sharp from 'sharp';
-import { IKendedesS3Metadata } from '@core/util/shared/IS3Metadata';
-import { IKendedesCropArea } from '@core/util/shared/ICropArea';
+import { IKendedesS3Metadata } from '@core/util/shared/IKendedesS3Metadata';
+import { IKendedesCropArea } from '@core/util/shared/IKendedesCropArea';
 
 
 interface IKendedesImageHandler {
