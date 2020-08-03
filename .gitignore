@@ -25,7 +25,7 @@ public/assets/pdf/
 # Dependency directory
 node_modules
 bower_components
-
+test/result/
 # Editors
 .idea
 *.iml
